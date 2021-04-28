@@ -1,13 +1,19 @@
 {
-  "name": "customicons",
-  "css_prefix_text": "icon-",
+  "name": "Customicons",
+  "css_prefix_text": "",
   "css_use_suffix": false,
   "hinting": true,
   "units_per_em": 1000,
   "ascent": 850,
   "glyphs": [
     {
-      "uid": "5e81ece4b5e6e735278f554d4cc1ddb0",
+      "uid": "f5eca4c36e1b5ea2faf3c33e06db275a",
+      "css": "heart",
+      "code": 61444,
+      "src": "fontawesome5"
+    },
+    {
+      "uid": "d73f4c51b2da9ccb9cecdab93d29f160",
       "css": "shopping-basket",
       "code": 59392,
       "src": "custom_icons",

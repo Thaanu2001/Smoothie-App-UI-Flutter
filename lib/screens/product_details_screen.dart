@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:smoothie_app_ui/screens/purchase_screen.dart';
 import 'package:smoothie_app_ui/widgets/animated_texts.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
@@ -221,7 +222,20 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                PageRouteBuilder(
+                                  pageBuilder:
+                                      (context, animation, secondaryAnimation) {
+                                    return ListenableProvider(
+                                      create: (context) => animation,
+                                      child: PurchaseScreen(),
+                                    );
+                                  },
+                                  transitionDuration: Duration(seconds: 1),
+                                ),
+                              );
+                            },
                             style: TextButton.styleFrom(
                               padding: EdgeInsets.fromLTRB(12, 5, 12, 5),
                               shape: RoundedRectangleBorder(
