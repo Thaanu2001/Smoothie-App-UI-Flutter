@@ -14,12 +14,16 @@ class _HomeScreenState extends State<HomeScreen> {
       Color(0x55ccffdd),
       Color(0xeeffffff),
       Colors.white,
+      // Color(0xcce8fff0),
+      // Color(0xfff5fff8),
     ],
     [
       Color(0x66d8a6ff),
       Color(0x55d8a6ff),
       Color(0xeeffffff),
       Colors.white,
+      // Color(0xfff6ebff),
+      // Color(0xccfaf5ff),
     ],
     [
       Color(0x66ffabab),
