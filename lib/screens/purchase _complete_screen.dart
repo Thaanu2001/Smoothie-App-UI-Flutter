@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:smoothie_app_ui/screens/purchase%20_complete_screen.dart';
 import 'package:smoothie_app_ui/services/customicons_icons.dart';
 import 'package:smoothie_app_ui/widgets/animated_texts.dart';
-import 'package:provider/provider.dart';
 
-class PurchaseScreen extends StatefulWidget {
+class PurchaseCompleteScreen extends StatefulWidget {
   @override
-  _PurchaseScreenState createState() => _PurchaseScreenState();
+  _PurchaseCompleteScreenState createState() => _PurchaseCompleteScreenState();
 }
 
-class _PurchaseScreenState extends State<PurchaseScreen> {
+class _PurchaseCompleteScreenState extends State<PurchaseCompleteScreen> {
   double buttonWidth;
   double buttonHeight;
   double buttonBottomMargin;
@@ -389,27 +387,14 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                           child: Container(
                             width: double.infinity,
                             margin: EdgeInsets.zero,
-                            padding: EdgeInsets.fromLTRB(0, 5, 0, 12),
+                            padding: EdgeInsets.fromLTRB(0, 0, 0, 12),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                             ),
                             child: TextButton(
-                              onPressed: () {
-                                Navigator.of(context).push(
-                                  PageRouteBuilder(
-                                    pageBuilder: (context, animation,
-                                        secondaryAnimation) {
-                                      return ListenableProvider(
-                                        create: (context) => animation,
-                                        child: PurchaseCompleteScreen(),
-                                      );
-                                    },
-                                    transitionDuration: Duration(seconds: 1),
-                                  ),
-                                );
-                              },
+                              onPressed: () {},
                               style: TextButton.styleFrom(
-                                padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
+                                padding: EdgeInsets.fromLTRB(12, 5, 12, 5),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
                                 ),

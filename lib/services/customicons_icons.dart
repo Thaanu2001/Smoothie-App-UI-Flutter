@@ -27,6 +27,8 @@ class Customicons {
 
   static const IconData shopping_basket =
       IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData visa =
+      IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData heart =
       IconData(0xf004, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
