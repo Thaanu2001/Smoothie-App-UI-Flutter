@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:smoothie_app_ui/screens/purchase%20_complete_screen.dart';
 import 'package:smoothie_app_ui/services/customicons_icons.dart';
 import 'package:smoothie_app_ui/widgets/animated_texts.dart';
-import 'package:provider/provider.dart';
+import 'package:smoothie_app_ui/widgets/payment_processing_modal.dart';
 
 class PurchaseScreen extends StatefulWidget {
   @override
@@ -41,7 +40,7 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
       backgroundColor: Colors.transparent,
       body: Stack(
         children: [
-          //*
+          //* Purchase screen section
           Container(
             alignment: Alignment.bottomCenter,
             child: AnimatedContainer(
@@ -88,6 +87,7 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
+                                  //* Product details section
                                   Row(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -142,6 +142,7 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SizedBox(height: 15),
+                              //* Map section
                               Stack(
                                 children: [
                                   Image.asset('lib/assets/map-image.png'),
@@ -149,7 +150,7 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                                     width: double.infinity,
                                     child: Container(
                                       alignment: Alignment.bottomRight,
-                                      height: 118,
+                                      height: 130,
                                       margin: EdgeInsets.zero,
                                       padding:
                                           EdgeInsets.fromLTRB(10, 5, 10, 5),
@@ -185,6 +186,7 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                                 ],
                               ),
                               SizedBox(height: 5),
+                              //* Estimate arrival section
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -216,6 +218,7 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                         ),
                         AnimatedTexts(
                           delay: 800,
+                          //* Price section
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -268,7 +271,7 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                               ),
                               Divider(
                                 thickness: 1,
-                                height: 20,
+                                height: 25,
                               ),
                               Row(
                                 mainAxisAlignment:
@@ -294,7 +297,7 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 5),
+                              SizedBox(height: 10),
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -326,14 +329,15 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                             ],
                           ),
                         ),
+                        //* Add note text field
                         AnimatedTexts(
                           delay: 900,
                           child: Column(
                             children: [
-                              SizedBox(height: 10),
+                              SizedBox(height: 15),
                               TextField(
-                                minLines: 2,
-                                maxLines: 2,
+                                minLines: 4,
+                                maxLines: 4,
                                 decoration: InputDecoration(
                                   filled: true,
                                   hintText: 'Add Note',
@@ -384,32 +388,22 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                             ],
                           ),
                         ),
+                        //* Place order button
                         AnimatedTexts(
                           delay: 1000,
                           child: Container(
                             width: double.infinity,
                             margin: EdgeInsets.zero,
-                            padding: EdgeInsets.fromLTRB(0, 5, 0, 12),
+                            padding: EdgeInsets.fromLTRB(0, 15, 0, 12),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                             ),
                             child: TextButton(
                               onPressed: () {
-                                Navigator.of(context).push(
-                                  PageRouteBuilder(
-                                    pageBuilder: (context, animation,
-                                        secondaryAnimation) {
-                                      return ListenableProvider(
-                                        create: (context) => animation,
-                                        child: PurchaseCompleteScreen(),
-                                      );
-                                    },
-                                    transitionDuration: Duration(seconds: 1),
-                                  ),
-                                );
+                                paymentProcessingModal(context);
                               },
                               style: TextButton.styleFrom(
-                                padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
+                                padding: EdgeInsets.fromLTRB(12, 14, 12, 14),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
                                 ),

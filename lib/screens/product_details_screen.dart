@@ -25,7 +25,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
     await Future.delayed(const Duration(milliseconds: 100), () {
       paddingImage.value = 0;
       setState(() {
-        buyNowHeight.value = 60;
+        buyNowHeight.value = 70;
       });
     });
   }
@@ -90,7 +90,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
               children: [
                 //* background image
                 Container(
-                  height: 500,
+                  height: 600,
                   width: double.infinity,
                   child: ClipRRect(
                     borderRadius: BorderRadius.only(
@@ -127,13 +127,13 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                 //* Topic text
                 Container(
                   alignment: Alignment.topCenter,
-                  padding: EdgeInsets.only(top: 100),
+                  padding: EdgeInsets.only(top: 150),
                   child: AnimatedTexts(
                     child: Text(
                       'Strawberry\nSmoothie',
                       style: TextStyle(
                         fontFamily: 'sf',
-                        fontSize: 30,
+                        fontSize: 35,
                         color: Colors.white,
                         fontWeight: FontWeight.w700,
                       ),
@@ -147,13 +147,13 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                   child: Container(
                     width: 250,
                     alignment: Alignment.topCenter,
-                    padding: EdgeInsets.only(top: 200),
+                    padding: EdgeInsets.only(top: 260),
                     child: AnimatedTexts(
                       child: Text(
                         'Strawberry-flavored juice and real strawberry pieces shaken with ice.',
                         style: TextStyle(
                           fontFamily: 'sf',
-                          fontSize: 19,
+                          fontSize: 20,
                           color: Colors.white,
                           fontWeight: FontWeight.w400,
                         ),
@@ -173,7 +173,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
             child: Hero(
               tag: 'mainCard',
               child: Container(
-                height: 323,
+                height: 328,
                 margin: const EdgeInsets.all(8.0),
                 padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
                 decoration: BoxDecoration(
@@ -217,7 +217,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                           duration: Duration(milliseconds: 600),
                           width: double.infinity,
                           margin: EdgeInsets.zero,
-                          padding: EdgeInsets.fromLTRB(10, 10, 10, 12),
+                          padding: EdgeInsets.fromLTRB(10, 10, 10, 15),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -249,7 +249,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                               'Buy Now',
                               style: TextStyle(
                                 fontFamily: 'sf',
-                                fontSize: 15,
+                                fontSize: 18,
                                 color: Colors.white,
                                 fontWeight: FontWeight.w700,
                               ),
